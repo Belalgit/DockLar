@@ -46,9 +46,9 @@ A streamlined Docker setup for Laravel applications with Nginx, PHP-FPM, and add
 
    Configure these essential variables:
    ```env
-   COMPOSE_PROJECT_NAME=dev_abc
+   COMPOSE_PROJECT_NAME=prod_abc
    APP_NAME=abc
-   ENV=dev
+   ENV=prod
 
    CONTAINER_PORT=8000
    HOST_URL=abc.com
@@ -65,6 +65,8 @@ A streamlined Docker setup for Laravel applications with Nginx, PHP-FPM, and add
    
    ENABLE_MONGODB_EXTENSION=false
    ENABLE_MONGODB_EXTENSION_VERSION=1.20.0
+   
+   ENABLE_SQLITE_EXTENSION=false
    ```
 
 4. **Run the magic script**
