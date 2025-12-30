@@ -57,7 +57,7 @@ source ./bash/certbot.sh
 
         # Enter the bash terminal of the PHP container
         if docker ps -q -f name=$CONTAINER_NAME | grep -q .; then
-            docker exec -it $CONTAINER_NAME bash
+            docker exec -u 0 -it $CONTAINER_NAME bash
         else
             echo "Error: Container $CONTAINER_NAME is not running"
         fi
@@ -79,4 +79,3 @@ source ./bash/certbot.sh
         # Install Lets Encrypt SSL Certificate
         install_ssl_certificate
     fi
-
